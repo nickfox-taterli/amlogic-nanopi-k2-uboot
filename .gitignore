@@ -17,7 +17,6 @@
 *.order
 *.elf
 *.swp
-*.bin
 *.patch
 *.cfgtmp
 *.diff

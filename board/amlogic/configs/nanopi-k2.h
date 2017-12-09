@@ -143,10 +143,10 @@
 		"earlyprintk=aml-uart,0xc81004c0\0" \
 	"droidargs=" \
 		"androidboot.console=ttyS0 androidboot.hardware=nanopi-k2\0" \
-	/* "rootargs=" \
-		"root=/dev/mmcblk0p2 rootfstype=ext4 rootwait init=/sbin/init\0" */ \
+	"rootargs=" \
+		"root=/dev/mmcblk0p2 rootfstype=ext4 rootwait init=/sbin/init\0" \
 	"init_bootargs=" \
-		"setenv bootargs ${consoleargs} ${droidargs} " \
+		"setenv bootargs ${consoleargs} ${rootargs} " \
 		  "hdmimode=${hdmimode} hdmitx=cecf logo=osd1,loaded,${fb_addr},${hdmimode} " \
 		  "initrd=${initrd_start},${initrd_size}\0" \
 	"init_display=" \
