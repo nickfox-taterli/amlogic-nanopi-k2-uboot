@@ -107,7 +107,6 @@
 
 #define CONFIG_EXTRA_ENV_SETTINGS \
 	"firstboot=1\0" \
-	"upgrade_step=0\0" \
 	"display_width=1920\0" \
 	"display_height=1080\0" \
 	"display_bpp=24\0" \
@@ -157,7 +156,7 @@
 		"booti ${loadaddr} - ${dtb_mem_addr}\0"
 
 #define CONFIG_PREBOOT  \
-	"run loaddtb; run init_display"
+	"run loaddtb"
 #define CONFIG_BOOTCOMMAND
 
 /* Image support */
@@ -190,7 +189,7 @@
 #define CONFIG_CMD_CPU_TEMP         1
 #define CONFIG_CMD_ITEST            1
 //#define CONFIG_CMD_MEMTEST          1
-#define CONFIG_CMD_NET              1
+//#define CONFIG_CMD_NET              1
 #define CONFIG_USBDOWNLOAD_GADGET   1
 #define CONFIG_CMD_FASTBOOT         1
 #define CONFIG_CMD_USB              1
